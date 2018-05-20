@@ -14,7 +14,7 @@ wf() {
 }
 
 
-s3conf_fn=conf/$3.s3cfg
+s3conf_fn=conf/$RUNNER_NAME.s3cfg
 
 prepare_s3conf() {
     wf $s3conf_fn <<EOF
