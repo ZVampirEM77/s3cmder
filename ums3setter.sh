@@ -97,7 +97,7 @@ EOF
 
 prepare_runner() {
     wf "$RUNNER_NAME" <<EOF
-s3cmd -c conf/$RUNNER_NAME.s3cfg \$@
+s3cmd -c $PWD/conf/$RUNNER_NAME.s3cfg \$@
 EOF
 }
 
