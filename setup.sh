@@ -30,7 +30,8 @@ chmod 700 $RUNNER_NAME
 APPEND_CONF="export PATH=$PWD:\$PATH"
 if [ `grep -c "$APPEND_CONF" ~/.bashrc` -eq '0' ] ; then
     echo $APPEND_CONF >> ~/.bashrc
-    source ~/.bashrc
 else
     echo "The Path configuration has existed!"
 fi
+
+source ~/.bashrc
