@@ -36,11 +36,11 @@ fi
 
 # for zsh
 ZSH_APPEND_CONF="source ~/.bashrc"
-if [ `echo $SHELL` == "/bin/zsh" ] ; then
+if [ `echo $SHELL` = "/bin/zsh" ] ; then
     if [ `grep -c "$ZSH_APPEND_CONF" ~/.zshrc` -eq '0' ] ; then
         echo $ZSH_APPEND_CONF >> ~/.zshrc
     else
-        "The configuration has existed in ~/.zshrc!"
+        echo "The configuration has existed in ~/.zshrc!"
     fi
 
     source ~/.zshrc
