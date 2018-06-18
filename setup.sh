@@ -30,8 +30,6 @@ chmod 700 $RUNNER_NAME
 APPEND_CONF="export PATH=$PWD:\$PATH"
 if [ `grep -c "$APPEND_CONF" ~/.bashrc` -eq '0' ] ; then
     echo $APPEND_CONF >> ~/.bashrc
-else
-    echo "The Path configuration has existed!"
 fi
 
 # for zsh
@@ -39,8 +37,6 @@ ZSH_APPEND_CONF="source ~/.bashrc"
 if [ `echo $SHELL` = "/bin/zsh" ] ; then
     if [ `grep -c "$ZSH_APPEND_CONF" ~/.zshrc` -eq '0' ] ; then
         echo $ZSH_APPEND_CONF >> ~/.zshrc
-    else
-        echo "The configuration has existed in ~/.zshrc!"
     fi
 
     source ~/.zshrc
